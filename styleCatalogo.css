@@ -212,3 +212,67 @@ header.hidden {
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
+
+
+/*------------------ RESPONSIVO ------------------*/
+/* ---------- RESPONSIVE PRODUCT GRID ---------- */
+
+.productos-vender {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 30px;
+}
+
+.producto-item {
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.producto-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.producto-img img {
+  width: 100%;
+  height: 400px; /* Más pequeño para móviles */
+  object-fit: cover;
+  display: block;
+}
+
+/* Media Queries para adaptar mejor tamaños */
+
+@media (max-width: 768px) {
+  .section-filtrar h2 {
+    font-size: 50px;
+  }
+  .opciones a {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .producto-img img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-filtrar h2 {
+    font-size: 36px;
+  }
+  .opciones {
+    padding: 10px;
+  }
+  .opciones a {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  .producto-img img {
+    height: 250px;
+  }
+}
+
+.navbar {
+  background-color: rgb(255, 255, 255);
+  padding: 15px 30px;
+}
