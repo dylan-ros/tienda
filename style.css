@@ -1,0 +1,403 @@
+/*------------------- BODY ------------------------*/
+
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: rgb(255, 255, 255);
+}
+
+/*------------------ HEADER ----------------------*/
+header {
+  background-color: rgb(255, 255, 255);
+  padding: 15px 30px;
+}
+
+header {
+  transition: top 0.3s;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+}
+
+header.hidden {
+  top: -100px; /* Ajusta según la altura de tu nav */
+}
+
+.header-section{
+    padding:10px;
+    margin: 10px;
+}
+
+/* FerrOmoda */
+.brand-link {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.brand-link:hover,
+.brand-link:focus {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+}
+
+/* Estilo general enlaces */
+.nav-link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  background-color: transparent;
+  position: relative;
+  padding-bottom: 5px;
+  transition: none !important;
+  overflow: hidden;
+}
+
+/* Quitar color azul de hover, focus y active */
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Línea invisible por defecto */
+.nav-link:not(.no-underline)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  bottom: 0;
+  height: 2px;
+  width: 20px;
+  background-color:black !important;
+  transition: transform 0.3s ease;
+}
+
+/* Animación al hacer hover */
+.nav-link:not(.no-underline):hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+
+/*---------------------  SECTION COLECCION INVIERNO OTOÑO --------------*/
+.coleccion-temporada{
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.titulo-coleccion {
+  color: rgb(0, 0, 0);
+   font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+.img-coleccion {
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* primera imagen más alta */
+.img-coleccion-1 {
+  height: 400px;
+}
+
+/* segunda imagen más baja */
+.img-coleccion-2 {
+  height: 350px;
+}
+
+.img-coleccion-3{
+  height: 500px ;
+}
+
+.img-coleccion-4{
+  height: 300px ;
+}
+
+.img-coleccion-5{
+  height: 350px;
+}
+
+.img-coleccion-7{
+  height: 500px;
+}
+
+.imagen-larga{
+  padding-top: 75px;
+}
+
+
+
+/*---------------------- NOVEDAD ----------------------*/
+.novedad{
+  background-color: rgb(255, 255, 255) ;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 2px;
+  padding-bottom: 150px;
+}
+
+.titulo-productos p{
+  color: rgb(0, 0, 0);
+  font-family: 'Playfair Display', serif;
+  padding-top: 150px;
+}
+
+
+/*------------------------ REGISTRO --------------------------*/
+.lo-ultimo {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url('/Images/ropa8.jpg');
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  padding-right: 60px;
+  overflow: hidden;
+}
+
+/* overlay opcional para oscurecer la imagen */
+.lo-ultimo .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  z-index: 1;
+}
+
+.notificaciones {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+}
+
+.notificaciones h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.notificaciones p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.newsletter-form .email-input {
+  flex: 1;
+  min-width: 250px;
+  background-color: white;
+  color: #000000;
+  border: none;
+  padding: 10px 15px;
+}
+
+.newsletter-form .btn {
+  padding: 10px 20px;
+  border: none;
+}
+
+/*------------------------------------------------FOOTER -------------------------------------------*/
+footer{
+  background-color: black;
+  justify-content: center;
+  text-align: center;
+  padding-top: 35px;
+  width: 100%;
+  height: 100%;
+}
+
+p{
+  color: rgb(255, 255, 255);
+  font-size: 10px;
+}
+/*----------------------------------------------- MOVIMIENTOS --------------------------------------*/
+
+.img-coleccion {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.img-coleccion:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  border-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/*----------------------------------------------------------------------------------------*/
+
+/* Título */
+.titulo-productos {
+  color: rgb(0, 0, 0);
+  padding-top:45px ;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 60px;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+/* Botón comprar */
+.comprar {
+  color: rgb(12, 12, 12);
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px 30px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.comprar-ahora{
+  padding-top: 30px;
+  padding-bottom: 45px;
+  color: black;
+
+}
+
+.comprar:hover {
+  background-color: white;
+  color: black;
+}
+
+/* --------------------------- RESPONSIVO ----------------------------- */
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 992px) {
+  .carousel-track {
+    width: 250px;
+    height: 250px;
+  }
+
+  .carousel-item {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-track {
+    width: 200px;
+    height: 200px;
+  }
+
+  .carousel-item {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-track {
+    width: 150px;
+    height: 150px;
+  }
+
+  .carousel-item {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel3d {
+    height: 250px;
+  }
+
+  .carousel3d figure img {
+    width: 200px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel3d {
+    height: 200px;
+  }
+
+  .carousel3d figure img {
+    width: 150px;
+    height: 100px;
+  }
+}
+
+
+
+.navbar {
+  background-color: rgb(255, 255, 255);
+  padding: 15px 30px;
+}
+
+.navbar-nav .nav-link {
+  color: rgb(0, 0, 0) !important;
+  position: relative;
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: rgb(0, 0, 0) !important;
+  background-color: transparent;
+}
+
+.navbar-nav .nav-link:not(.no-underline)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  bottom: 0;
+  height: 2px;
+  width: 20px;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:not(.no-underline):hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.navbar-brand {
+  color: rgb(0, 0, 0) !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  border-color: rgb(0, 0, 0);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+footer{
+  background-color: white;
+}
+
+footer p{
+  color: #000000;
+}
+

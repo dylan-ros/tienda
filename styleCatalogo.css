@@ -1,0 +1,214 @@
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: rgb(255, 255, 255);
+}
+
+/*---------------------------- HEADER --------------------------------*/
+header {
+  background-color: rgb(255, 255, 255);
+  padding: 15px 30px;
+}
+
+header {
+  transition: top 0.3s;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+}
+
+header.hidden {
+  top: -100px; /* Ajusta según la altura de tu nav */
+}
+
+.header-section{
+    padding:10px;
+    margin: 10px;
+}
+
+/* FerrOmoda */
+.brand-link {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.brand-link:hover,
+.brand-link:focus {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+}
+
+/* Estilo general enlaces */
+.nav-link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  background-color: transparent;
+  position: relative;
+  padding-bottom: 5px;
+  transition: none !important;
+  overflow: hidden;
+}
+
+/* Quitar color azul de hover, focus y active */
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Línea invisible por defecto */
+.nav-link:not(.no-underline)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  bottom: 0;
+  height: 2px;
+  width: 20px;
+  background-color:black;
+  transition: transform 0.3s ease;
+}
+
+/* Animación al hacer hover */
+.nav-link:not(.no-underline):hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+
+/*-------------------------------- SECTION FILTROS -------------------------------*/
+.section-filtrar {
+  padding-top: 170px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.section-filtrar h2{
+    font-size: 120px;
+}
+
+.opciones{
+    padding: 25px;
+}
+
+.opciones a{
+    font-size: 20px;
+    margin-right: 40px;
+    text-decoration: none;
+    color: black !important;
+}
+
+.opciones a:not(:first-child) {
+  border-left: 1px solid #000; /* la línea divisoria */
+  padding-left: 20px; /* espacio a la izquierda de la línea */
+}
+
+
+
+.linea-divisoria {
+    border: none;
+    border-top: 1px solid #000000; /* Color gris claro */
+    margin: 20px auto;
+    width: 90%;
+}
+
+
+/*--------------------------------- SECTION OBJETOS -----------------------------------*/
+
+.producto-item {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.producto-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.producto-img {
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.producto-img img {
+  width: 100%;
+  height: 500px;        /* Ajusta esta altura a tu gusto */
+  object-fit: cover;
+  display: block;
+}
+
+.producto-img:hover img {
+  transform: scale(1.1);
+}
+
+.vista-rapida {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  padding: 8px 20px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.producto-img:hover .vista-rapida {
+  opacity: 1;
+}
+
+.producto-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.producto-precio {
+  font-size: 14px;
+  color: #000;
+}
+
+.producto-precio.agotado {
+  color: #999;
+  font-style: italic;
+}
+
+.page-link {
+  color: #000;           /* color negro */
+}
+
+.page-link:hover,
+.page-link:focus {
+  color: #000;           /* negro también al pasar el mouse o enfocar */
+  text-decoration: none; /* opcional, quita subrayado en hover */
+}
+
+.btn-custom {
+  background: linear-gradient(90deg, #6c6b6d, #000000);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-custom:hover {
+  color: white;
+  background: linear-gradient(90deg, #909090, #000000);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
